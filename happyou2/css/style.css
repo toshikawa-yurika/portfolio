@@ -1,0 +1,426 @@
+@charset "utf-8";
+
+body {
+    font-family: "Sawarabi Gothic", sans-serif;
+    background: #000;
+    line-height: 1.6rem;
+}
+
+/* --------------------------- */
+
+/* 背景用のコード */
+html, body {
+    height: 100%;
+    /* margin: 0;
+    padding: 0; */
+}
+
+.background {
+    height: 100%;
+    position:absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+/* --------------------------- */
+
+/* manaさんのコードから引用 */
+
+.header {
+    height: 100vh;
+    /* display: grid;
+    place-items: center; */
+    display: flex;
+    align-items: center;
+}
+
+.box {
+    background: #fff;
+    border-radius: 5px;
+    padding: 20px;
+    text-align: center;
+    width: 20%;
+    margin: 0 auto;
+    /* margin-top: 50vh; */
+}
+
+/* --------------------------- */
+
+/* ここから自分のコード */
+
+.inner {
+    background-color: #fff;
+    padding: 10% ;
+}
+
+section {
+    margin-bottom: 200px;
+}
+
+h1 {
+    font-size: 18px;
+}
+
+h2 {
+    font-family: "Merienda", cursive;
+    font-size: 25px;
+    font-weight: 500;
+    margin-left: 20px;
+}
+
+/* --------------------------- */
+
+/* セクション共通 */
+
+.flex {
+    display: flex;
+    justify-content: space-between;
+}
+
+.relative {
+    position: relative;
+}
+
+.haikei {
+    background-color: black;
+    max-width: 2000px;
+    padding: 30px;
+    margin: 0 auto;
+    border-radius: 30px;
+    margin-top: 40px;
+}
+
+/* 文章のdiv*/
+.section-div {
+    margin: 20px;
+    margin-top: 50px;
+}
+
+/* 参考サイトのボタン */
+.sanko-saito {
+    background-color: #0bd;
+    color: #fff;
+    border-radius: 10px;
+    padding: 5px;
+    display: inline-block;
+    margin-bottom: 20px;
+}
+
+/* リンクの色 */
+.link:hover {
+    color: #0bd;
+}
+
+/* 文字太くする */
+.bold{
+    font-weight: bold;
+}
+
+/* --------------------------- */
+
+/* 星空の背景のスタイル */
+.stars {
+    position: relative;
+    width: 100%; /* 星空の横幅 */
+    height: auto; /* 星空の縦幅 */
+    background-color: black; /* 星空の背景色 */
+    overflow: hidden; /* 星が枠外にはみ出すのを防ぐ */
+    z-index: 0;
+    max-width: 2000px;
+    padding: 30px;
+    margin: 0 auto;
+    border-radius: 30px;
+    margin-top: 40px;
+}
+
+/* 星のスタイル */
+.star {
+  position: absolute;
+  display: block;
+  background-color: #fff; /* 星の色 */
+  border-radius: 50%;
+  box-shadow: 0 0 4px 2px rgba(255, 255, 255, 0.2); /* 星の影 */
+  opacity: 0;
+  animation: twinkle 5s infinite;
+}
+
+/* 星がキラキラ光るアニメーション */
+@keyframes twinkle {
+  0% {
+    opacity: 0;
+  }
+
+  50% {
+    transform: scale(1.1);
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+    transform: scale(1);
+  }
+}
+
+/* --------------------------- */
+
+/* セクション１・宇宙 */
+
+.section1-haikei {
+    height: 1000px;
+}
+
+.sun {
+    width: 80px;
+    z-index: 1;
+}
+
+.tikyuu,
+.mokusei {
+    width: 45px;
+    z-index: 1;
+}
+
+.dosei {
+    width: 80px;
+    z-index: 1;
+}
+
+/* absoluteで真ん中に持ってくる */
+.absolute {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform-origin: 0 0;
+    transform: translate(-50%, -50%);
+}
+
+/* アニメーション */
+@keyframes kaiten1 {
+    0% {
+        transform: rotate(0deg) translate(150%, 150%);
+    }
+    100% {
+        transform: rotate(360deg) translate(150%, 150%);
+    }
+}
+
+@keyframes kaiten2 {
+    0% {
+        transform: rotate(0deg) translate(300%, 300%);
+    }
+    100% {
+        transform: rotate(360deg) translate(300%, 300%);
+    }
+}
+
+/* 楕円でやりたい */
+@keyframes kaiten3 {
+    0% {
+        transform: rotate(-45deg) translate(350%, 0%);
+    }
+    25%{
+        transform: rotate(45deg) translate(200%, 0%);
+    }
+    50%{
+        transform: rotate(135deg) translate(350%, 0%);
+    }
+    75%{
+        transform: rotate(225deg) translate(200%, 0%);
+    }
+    100% {
+        transform: rotate(315deg) translate(350%, 0%);
+    }
+}
+
+/* @keyframes kaiten4 {
+    0% {
+        transform: rotate(0deg) translate(400%, 400%);
+    }
+    100% {
+        transform: rotate(360deg) translate(400%, 400%);
+    }
+} */
+
+.tikyuu {
+    animation: kaiten1 5s infinite linear;
+}
+
+.mokusei {
+    animation: kaiten2 7s infinite linear;
+}
+
+.dosei {
+    animation: kaiten3 10s infinite linear;
+}
+
+/* 外周の線 */
+.section1-border1 {
+    width: 260px;
+    height: 260px;
+    border-radius: 50%;
+    border: 1.5px solid #fff;
+}
+
+.section1-border2 {
+    width: 450px;
+    height: 450px;
+    border-radius: 50%;
+    border: 1.5px solid #fff;
+}
+
+.section1-border3 {
+    width: 750px;
+    height: 750px;
+    border-radius: 50%;
+    border: 1.5px solid #fff;
+}
+
+/* --------------------------- */
+
+/* セクション２・モーダルウィンドウ */
+
+.section2-haikei {
+    height: 650px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* ボタン */
+.button {
+    font-family: "Merienda", cursive;
+    font-weight: 700;
+    background: #fff;
+    text-align: center;
+    width: 500px;
+    height: 100px;
+    font-size: 45px;
+    border-radius: 5px;
+}
+
+.button:hover {
+    background-color: #0bd;
+    cursor: pointer;
+}
+
+/* モーダルウィンドウの背景（グレーの部分） */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* モーダルウィンドウ本体 */
+.modal-content {
+    background-color: #fff;
+    margin: 25% auto;
+    width: 50%;
+    animation: modalopen 1s;
+}
+
+@keyframes modalopen {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* モーダルのヘッダー */
+.modal-header h1 {
+    margin: 10px;
+}
+
+.modal-header {
+    background: lightblue;
+    padding: 3px 15px;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* クローズボタン */
+.modalClose {
+    font-size: 30px;
+}
+
+.modalClose:hover {
+    cursor: pointer;
+}
+
+.modal-body {
+    padding: 10px 20px;
+}
+
+
+/* --------------------------- */
+
+/* セクション３・チェックリスト */
+
+.section3-haikei {
+    height: 650px;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.section3-p {
+    margin-bottom: 20px;
+}
+
+.contact-flex {
+    font-family: "Merienda", cursive;
+    display: flex;
+    gap: 50px;
+}
+
+.checklist {
+    font-size: 30px;
+}
+
+/* ロックしたときの装飾  */
+.checklist.locked {
+    opacity: 0.75;
+    color: #aaa;
+}
+
+/* --------------------------- */
+
+/* セクション４・おまけ */
+
+.section4 {
+    margin-bottom: 0px;
+}
+
+.section4-p{
+    margin-bottom: 15px;
+}
+
+
+
+
+/* --------------------------- */
+
+/* フッター */
+
+.footer {
+    margin-right: 30px;
+    display: flow-root;
+}
+
+.footer-inner {
+    color: #fff;
+    float: right;
+}
+
+.footer p {
+    font-size: 10px;
+}

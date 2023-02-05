@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>技術シェア（歳川）</title>
+        <link rel="stylesheet" href="./riset.css" media="all" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Kiwi+Maru:wght@300&family=Lato:wght@100&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="./happyou.css" media="all" />
+    </head>
+
+    <body>
+        <div class="wrap">
+            <div class="inner">
+                <header class="header">
+                    <h1 class="header-title">
+                        自分が身につけた<br />
+                        Webサイト制作の技術
+                    </h1>
+
+                    <p class="header-p1">
+                        第一回目の技術シェアを始めます。<br />
+                        よろしくお願い致します。
+                    </p>
+                    <p class="header-p2">
+                        ポートフォリオサイトの作成中に発見したものや、<br />
+                        授業中に学んだものの中から<br />
+                        今回は3点を紹介したいと思います。
+                    </p>
+                </header>
+                <main class="main">
+                    <div class="main-inner">
+                        <section class="section1">
+                            <p class="section-number">1</p>
+
+                            <div class="section-h2-div">
+                                <h2 class="section1-h2">
+                                    文字を縦書きにする方法
+                                </h2>
+                            </div>
+                            <p class="section-p">
+                                地味だけど、意外とわからなかった縦書きにする方法・・・<br />
+                                下記のCSSで実現できます。
+                            </p>
+                            <div class="codepen-div">
+                                <p
+                                    class="codepen"
+                                    data-height="580"
+                                    data-default-tab="html,result"
+                                    data-slug-hash="MWXpYGX"
+                                    data-user="eureka0822"
+                                    style="
+                                        height: 580px;
+                                        box-sizing: border-box;
+                                        display: flex;
+                                        align-items: center;
+                                        justify-content: center;
+                                        border: 2px solid;
+                                        margin: 1em 0;
+                                        padding: 1em;
+                                    "
+                                >
+                                    <span
+                                        >See the Pen
+                                        <a
+                                            href="https://codepen.io/eureka0822/pen/MWXpYGX"
+                                        >
+                                            縦書きにする方法</a
+                                        >
+                                        by yurika toshikawa (<a
+                                            href="https://codepen.io/eureka0822"
+                                            >@eureka0822</a
+                                        >) on
+                                        <a href="https://codepen.io">CodePen</a
+                                        >.</span
+                                    >
+                                </p>
+                                <script
+                                    async
+                                    src="https://cpwebassets.codepen.io/assets/embed/ei.js"
+                                ></script>
+                            </div>
+
+                            <div class="section-div">
+                                <h3 class="section-h3-div">コメント</h3>
+                                <p>
+                                    左側は無理やりwidthを細くし折り返しにして、縦書きにした方法です。
+                                </p>
+                                <p>
+                                    これでも一応縦書きにはなりましたが、ー（横棒）などは縦にならないです。
+                                </p>
+
+                                <p>
+                                    そこで調べたところ、writing-modeで設定する方法を見つけました。
+                                </p>
+                                <p>『writing-mode: vertical-rl;』を記載。</p>
+
+                                <p>
+                                    その他細かい設定については、参考サイトをご覧ください。
+                                </p>
+                                <a
+                                    href="https://www.webcreatorbox.com/tech/writing-mode"
+                                    target="_blank"
+                                    class="sanko-saito"
+                                    >参考サイト</a
+                                >
+                                <ul>
+                                    <li>
+                                        <dl class="dl">
+                                            <dt class="dt">やりたかった理由</dt>
+                                            <dd class="dd">
+                                                ポートフォリオサイトで縦書きの部分があったから
+                                            </dd>
+                                        </dl>
+                                    </li>
+                                    <li>
+                                        <dl class="dl">
+                                            <dt class="dt">疑問点</dt>
+                                            <dd class="dd">
+                                                なぜ、左は上に一文字分空いているのか、左と右で文字の大きさ、文字間隔の違いが生まれるのかはよくわかっていません。
+                                            </dd>
+                                        </dl>
+                                    </li>
+                                </ul>
+                            </div>
+                        </section>
+
+                        <section class="section2">
+                            <p class="section-number">2</p>
+                            <div class="section-h2-div relative">
+                                <div class="section2-maru absolute"></div>
+                                <h2 class="section2-h2 absolute">
+                                    CSSで<br />
+                                    丸を回す方法
+                                </h2>
+                            </div>
+
+                            <p class="section-p">
+                                私のポートフォリオのメイン画像では、<br />
+                                Java
+                                scriptで丸をうにょうにょと動かす予定なので、<br />
+                                こちらの技術はポートフォリオで使うことはありませんでしたが、<br />
+                                とても勉強になったので、今回載せたいと思いました。
+                            </p>
+
+                            <div class="codepen-div">
+                                <p
+                                    class="codepen"
+                                    data-height="500"
+                                    data-default-tab="html,result"
+                                    data-slug-hash="OJEpobV"
+                                    data-user="eureka0822"
+                                    style="
+                                        height: 500px;
+                                        box-sizing: border-box;
+                                        display: flex;
+                                        align-items: center;
+                                        justify-content: center;
+                                        border: 2px solid;
+                                        margin: 1em 0;
+                                        padding: 1em;
+                                    "
+                                >
+                                    <span
+                                        >See the Pen
+                                        <a
+                                            href="https://codepen.io/eureka0822/pen/OJEpobV"
+                                        >
+                                            丸を回転させる方法</a
+                                        >
+                                        by yurika toshikawa (<a
+                                            href="https://codepen.io/eureka0822"
+                                            >@eureka0822</a
+                                        >) on
+                                        <a href="https://codepen.io">CodePen</a
+                                        >.</span
+                                    >
+                                </p>
+                                <script
+                                    async
+                                    src="https://cpwebassets.codepen.io/assets/embed/ei.js"
+                                ></script>
+                            </div>
+                            <div class="section-div">
+                                <h3 class="section-h3-div">コメント</h3>
+                                <p>
+                                    尾本さんや菊池さんが参考サイトにするとおっしゃっていたmanaさんのコードペンから参考にしました。
+                                </p>
+
+                                <p>
+                                    0% { transform: rotate(0deg); } <br />
+                                    100% {transform: rotate(360deg);
+                                    }で回転させています。
+                                </p>
+                                <p>
+                                    もともとmanaさんのコードペンでは、to
+                                    {transform: rotate(360deg);
+                                    }となっており、よくわからなかったのですが、
+                                    0% = from , 100% = toでもできるらしいです。
+                                    (西本さんに教えてもらいました。)
+                                </p>
+                                <p>
+                                    ちなみに、rotateXにすると前方向に回るので面白かったです。
+                                </p>
+                                <a
+                                    href="https://codepen.io/manabox/pen/LyvGbx"
+                                    class="sanko-saito"
+                                    target="_blank"
+                                    >manaさんのコードペン</a
+                                >
+
+                                <ul>
+                                    <li>
+                                        <dl class="dl">
+                                            <dt class="dt">やりたかった理由</dt>
+                                            <dd>
+                                                メイン画像で使おうか検討していたため。
+                                            </dd>
+                                        </dl>
+                                    </li>
+                                    <li>
+                                        <dl class="dl">
+                                            <dt class="dt">疑問点</dt>
+                                            <dd>
+                                                mix-blend-mode:
+                                                multiplyが調べてもよくわからなかった。
+                                            </dd>
+                                        </dl>
+                                        <dl class="dl">
+                                            <dt class="dt">疑問点2</dt>
+                                            <dd>
+                                                このWEBページで実装しようとしたところ、アニメーションでtransformを使ったら、
+                                                丸の中央揃えのために使っていたtransform:
+                                                translate(-50%,
+                                                -50%);が効かなくなってしまった。<br />
+                                                （なので、このサイトではアニメーション部分はコメントアウトしています。）
+                                                <p class="kaiketubun">
+                                                    →アニメーション部分でもtransformプロパティを使っていて上書きされてしまっていたのが原因。transform-origin:
+                                                    0
+                                                    0;を設定し、アニメーションにもtranslate(-50%,
+                                                    -50%)を設定することで解決した。
+                                                </p>
+                                            </dd>
+                                        </dl>
+                                    </li>
+                                    <li>
+                                        <dl class="dl">
+                                            <dt class="dt">ポイント</dt>
+                                            <dd>
+                                                アニメーションで３つの丸の回転速度をそれぞれ変えている
+                                            </dd>
+                                        </dl>
+                                    </li>
+                                </ul>
+                            </div>
+                        </section>
+
+                        <section class="section3">
+                            <p class="section-number">3</p>
+                            <div class="section-h2-div relative">
+                                <div class="absolute section3-shikaku">
+                                    <p class="absolute section3-batsu">✖</p>
+                                </div>
+                                <h2 class="section3-h2 absolute">
+                                    modal window
+                                </h2>
+                            </div>
+                            <p class="section-p">
+                                授業中にやったのでご存じの方も多いと思いますが、<br />
+                                改めて自分で作ってみて習得したいと思いましたので、今回取り入れました。
+                            </p>
+                            <p class="section-p">
+                                授業中では:target疑似クラスを使用したやり方でしたが、<br />
+                                今回はinput要素を使用してのやり方、<br />
+                                かつ上から降りてくるようなデザインのモーダルウィンドウです。
+                            </p>
+                            <div class="codepen-div">
+                                <p
+                                    class="codepen"
+                                    data-height="500"
+                                    data-default-tab="html,result"
+                                    data-slug-hash="eYKyeaQ"
+                                    data-user="eureka0822"
+                                    style="
+                                        height: 500px;
+                                        box-sizing: border-box;
+                                        display: flex;
+                                        align-items: center;
+                                        justify-content: center;
+                                        border: 2px solid;
+                                        margin: 1em 0;
+                                        padding: 1em;
+                                    "
+                                >
+                                    <span
+                                        >See the Pen
+                                        <a
+                                            href="https://codepen.io/eureka0822/pen/eYKyeaQ"
+                                        >
+                                            モーダルウィンドウinput参考</a
+                                        >
+                                        by yurika toshikawa (<a
+                                            href="https://codepen.io/eureka0822"
+                                            >@eureka0822</a
+                                        >) on
+                                        <a href="https://codepen.io">CodePen</a
+                                        >.</span
+                                    >
+                                </p>
+                                <script
+                                    async
+                                    src="https://cpwebassets.codepen.io/assets/embed/ei.js"
+                                ></script>
+                            </div>
+                            <div class="section-div">
+                                <h3 class="section-h3-div">コメント</h3>
+                                <p>
+                                    正直時間が足らず全然解読できていません。疑問ばかり残る結果となりました。
+                                </p>
+                                <p>
+                                    ただ、今回input要素でやってみましたが、普通に授業で習ったtarget疑似クラスの方がシンプルだし適切な気がしました。
+                                </p>
+                                <p>
+                                    また、Yahoo!ショッピングの商品ページなど、
+                                    inputタグ使用不可の環境もあるらしいです。
+                                </p>
+                                <p>
+                                    今回このやり方でやったことによってinputとlabelの関係など色んなことを学べました。
+                                </p>
+                                <p>
+                                    たいていのサイトでは、Java
+                                    scriptを使用しての実現をおすすめされていたので、
+                                    次はJava
+                                    scriptでモーダルウィンドウを作ってみたいと思います。
+                                </p>
+                                <a
+                                    href="https://dubdesign.net/download/html-css/modal-window/"
+                                    class="sanko-saito"
+                                    target="_blank"
+                                    >参考サイト</a
+                                >
+                                <ul>
+                                    <li>
+                                        <dl class="dl">
+                                            <dt class="dt">やりたかった理由</dt>
+                                            <dd>
+                                                商品ページのイメージ画像などでよく見かけていたデザインだったので、習得したいと思った。
+                                            </dd>
+                                        </dl>
+                                    </li>
+                                    <li>
+                                        <dl class="dl">
+                                            <dt class="dt">疑問点</dt>
+                                            <dd>
+                                                コードペン上に疑問点書きまくっていますが、全体的に何がなんやらよくわかっていません。今後も解読していこうと思っています。
+                                            </dd>
+                                        </dl>
+                                    </li>
+                                    <li>
+                                        <dl class="dl">
+                                            <dt class="dt">ポイント</dt>
+                                            <dd>
+                                                チェックボックスにチェックが入ったら、モーダルウィンドウが開く仕組み
+                                            </dd>
+                                        </dl>
+                                    </li>
+                                </ul>
+                            </div>
+                        </section>
+
+                        <section class="section4">
+                            <h2>【編集後記】</h2>
+
+                            <ul class="ten">
+                                <li>
+                                    今回デザインを参考にしたサイト　　<a
+                                        href="https://coco-factory.jp/ugokuweb/move01/9-6-1/"
+                                        class="sanko-saito"
+                                        target="_blank"
+                                        >参考サイト</a
+                                    >
+                                </li>
+                                <li>
+                                    フォントで結構悩んでいたが、今回かわいいフォント（キウイ丸）を見つけられてとても嬉しかったです！<br />
+                                    （今回の参考サイトはadobe
+                                    fontだったので、どうしようかと思った・・・）
+                                </li>
+                                <li>
+                                    地味ながらこだわったポイントは、ヘッダーをheight：100vhで設定したことと、リンクを別ページで開くようにしたことです。
+                                </li>
+
+                                <li>
+                                    意外とオレンジのdivと文章を並べるのが難しかったですが、なんとかできてよかった。今回でflex-shrinkの使いどころを習得できた気がします。
+                                </li>
+                                <li>
+                                    最後に、今回の制作にあたり相談させていただいた皆さま、誠にありがとうございました。
+                                </li>
+                            </ul>
+                        </section>
+                    </div>
+                </main>
+                <footer class="footer">
+                    <div class="footer-inner">
+                        <p><small>@toshikawa yurika blog 2022</small></p>
+                    </div>
+                </footer>
+            </div>
+        </div>
+    </body>
+</html>

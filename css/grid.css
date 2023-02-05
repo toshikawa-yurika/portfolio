@@ -1,0 +1,100 @@
+@charset "utf-8";
+
+/* グリッドを使ってみたかった */
+/* 今回未使用 */
+
+/* PC版 */
+
+@media screen and (min-width: 760px) {
+    /* .wrap {
+        display: grid;
+        grid-template-columns: 1fr 960px 1fr;
+        grid-template-rows: 270px 420px 1fr 107px;
+    } */
+
+    /* クラス名にflex付けたら、フレックスつくようになる */
+    /* .flex {
+        display: flex;
+    } */
+/* 
+    body{
+        margin: 0 auto;
+    }; */
+
+    header {
+        max-width: 960px;
+        height: auto;
+        /* display: flex;
+        justify-content: space-between; */
+        /* align-items: center; */
+        /* grid-row: 1 / 2;
+        grid-column: 2 / 3;
+    }
+
+
+    /* アイコン */
+
+    .fa-brands {
+        font-size: 40px;
+        color: gray;
+        display: block;
+    }
+
+    .nav {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        flex-grow: 1;
+        align-items: flex-end;
+    }
+
+    .nav a {
+        margin: 20px;
+        /* display: flex;
+  gap: 20px; */
+    }
+
+
+ 
+
+    /* メインコンテンツ */
+
+    main {
+        /* width: 960px; */
+        background-color: aqua;
+        /* grid-row: 3 / 4;
+        grid-column: 2 / 3; */
+    }
+
+    .skill {
+        width: 920px;
+        height: auto;
+        margin: 0 auto 130px auto;
+        background-color: brown;
+    }
+
+    .works {
+        /* width: 920px; */
+        /* height: 300px; */
+        /* margin: 0 auto 150px auto; */
+        background-color: beige;
+        /* display: grid;
+  grid-row: ; */
+    }
+
+    .blog {
+        width: 920px;
+        height: 300px;
+        margin: 0 auto 50px auto;
+        background-color: blue;
+    }
+
+    footer {
+        /* width: 960px; */
+        /* height: 107px; */
+        /* margin: 0 auto; */
+        background-color: pink;
+        grid-row: 4 / 5;
+        grid-column: 2 / 3;
+    }
+}

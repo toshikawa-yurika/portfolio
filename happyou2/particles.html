@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>技術シェア（歳川）</title>
+
+    <!-- リセットCSS -->
+    <link rel="stylesheet" href="./css/riset.css" media="all" />
+    <!-- グーグルフォント -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Kiwi+Maru:wght@300&family=Lato:wght@100;300;400;700;900&family=Merienda:wght@300;400;500;600;700;800;900&family=Sawarabi+Gothic&display=swap" rel="stylesheet" />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/style.css" media="all" />
+
+    <!-- jQueri -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+
+
+<body>
+    <div class="container">
+        <header class="header relative">
+            <div class="box">
+                <h1>
+                        自分が身につけた<br />
+                        Webサイト制作の技術
+                    </h1>
+            </div>
+        </header>
+
+        <main>
+            <div class="inner">
+                <section>
+                    <div class="flex">
+
+                        <h2>Number1: Universe</h2>
+                        <p class="sub-title">
+                                前回、丸を回転させる方法を発表した際に、木田さんからアドバイスいただき、<br />
+                                面白い回り方していたので、宇宙の惑星を実現したいと思い、実行に到りました。
+                            </p>
+
+                    </div>
+
+                    <div class="stars">
+                        <div class="section1-haikei relative">
+                            <img src="./img/space01_sun.png" alt="太陽" class="sun absolute" />
+                            <div class="section1-border1 absolute"></div>
+                            <img src="./img/chikyuu.png" alt="地球" class="tikyuu absolute" />
+                            <div class="section1-border2 absolute"></div>
+                            <img src="./img/space06_jupitor.png" alt="木星" class="mokusei absolute" />
+                            <div class="section1-border3 absolute"></div>
+                            <img src="./img/space07_saturn.png" alt="土星" class="dosei absolute" />
+                        </div>
+                    </div>
+                </section>
+
+                <section>
+                    <div class="flex">
+                        <h2>Number2: Modal window</h2>
+                        <p>
+                                前回CSSでモーダルウィンドウを作成したが、今回はJSでモーダルウィンドウを作りました。
+                            </p>
+                    </div>
+
+                    <div class="haikei section2-haikei">
+                        <button id="modalOpen" class="button">
+                            Click Me
+                        </button>
+
+                        <div id="easyModal" class="modal">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h1>Great job !</h1>
+                                    <span class="modalClose">×</span>
+                                </div>
+                                <div class="modal-body">
+                                    <p>
+                                            You've just displayed this awesome
+                                            Modal Window!
+                                        </p>
+                                    <p>
+                                            Let's enjoy learning JavaScript ☺️
+                                        </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="section-div">
+                        <a href="https://tcd-theme.com/2021/08/javascript-modalwindow.html" target="_blank" class="sanko-saito">参考サイト</a>
+                        <a href="https://www.zunouissiki.com/diffrent-target-currenttarget/" target="_blank" class="sanko-saito">e.targetについて</a>
+                        <p>
+                                <span class="bold">感想：</span>やっぱりCSSでモーダルウィンドウを作るより、CSSは装飾、JSでは挙動とファイルを分けれるので、理解しやすかったです。
+                            </p>
+                        <p>
+                                ポイント：×ボタンだけではなく、モーダルウィンドウの外の部分をクリックしても、モーダルウィンドウが閉じるようになっているのがポイントです。
+                            </p>
+                    </div>
+                </section>
+
+                <section>
+                    <div class="flex">
+                        <h2>Number3: Checkbox</h2>
+                        <p>
+                                ラジオボタン→1個だけ選択、チェックボックス→複数選択可能（何個でも選択可能）だったかと思いますが、<br />
+                                チェックボックスの個数制限（〇個まで選択可能）がJSでできたので、シェアしたいと思いました。
+                            </p>
+                    </div>
+
+                    <div class="haikei section3-haikei ">
+                        <div class="">
+                            <p class="section3-p">※チェック2個まで</p>
+                            <div class="contact-flex">
+                                <div class="checklist">
+                                    <input type="checkbox" name="koumoku" value="check1" id="koumoku1" onclick="click_cb();" /><label for="koumoku1">check1</label>
+                                </div>
+
+                                <div class="checklist">
+                                    <input type="checkbox" name="koumoku" value="check2" id="koumoku2" onclick="click_cb();" /><label for="koumoku2">check2</label>
+                                </div>
+
+                                <div class="checklist">
+                                    <input type="checkbox" name="koumoku" value="check3" id="koumoku3" onclick="click_cb();" /><label for="koumoku3">check3</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="section-div">
+                        <a href="https://to-benefit7.com/jquery-restriction-checkbox/" target="_blank" class="sanko-saito">参考サイト</a>
+                        <p>
+                                <span class="bold">感想：</span>簡単そうなのに、こんなに記述を書くんだと驚きました。
+                            </p>
+                    </div>
+                </section>
+
+                <section class="section4">
+                    <h2>Omake: background</h2>
+
+                    <div class="section-div ">
+
+                        <p class="section4-p">
+                            headerの背景について：<a
+                                href="https://vincentgarreau.com/particles.js/#default"
+                                target="_blank"
+                                class="link bold"
+                                >コチラ</a
+                            >の プラグインで実現しました。
+                        </p>
+
+                        <p class="section4-p">
+                            右上の「default」を「NASA」に変更すると、宇宙とかもあって面白かった。
+                        </p>
+                        <a href="https://codepen.io/eureka0822/pen/RwyzVRe" target="_blank" class="sanko-saito">参考にしたコードペン（manaさん）</a>
+
+                        <a href="https://marcbruederlin.github.io/particles.js/" target="_blank" class="sanko-saito">使い方サイト</a>
+                        <p>
+                            <span class="bold">問題点：</span>canvasの高さがおかしい。装飾部分がトップの100vhしか反映されない。<br>
+                            　　　　canvasのwidth,height属性を設定しても、ネットで調べたjsを設定しても、何をしても解決できなかった。<br>
+                            　　　　縦幅を変えるには、アスペクト比の変更を行わないといけないみたいだった。<br>
+                            　　　　本来なら、CSSでhtml,body{height:100%}で全体にかかるはずなのに・・・。
+                        </p>
+                    </div>
+                </section>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <div class="footer-inner">
+                <p><small>@toshikawa yurika blog 2022</small></p>
+            </div>
+        </footer>
+
+    </div>
+
+    <canvas class="background" id="canvas"></canvas>
+    <!-- Canvas スクリプティング API や WebGL API を使用して、グラフィックやアニメーションを描画することができます。 -->
+    <!-- particles使うのに必要 -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/particlesjs/2.2.2/particles.min.js"></script>
+    <script src="./js/style.js"></script>
+
+</body>
+</html>

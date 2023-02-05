@@ -1,0 +1,11 @@
+@charset "utf-8";
+
+/* モバイルファースト */
+
+a {
+    font-weight: bold;
+}
+
+.margin-top{
+    margin-top: 20px;
+}

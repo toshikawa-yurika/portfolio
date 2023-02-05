@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <div>
+            <h1>BMIランク評価</h1>
+            <form action="">
+                <dl>
+                    <dt>身長：</dt>
+                    <dd><input type="text" name="height" id="height" />cm</dd>
+                    <dt>体重：</dt>
+                    <dd><input type="text" name="weight" id="weight" />kg</dd>
+                </dl>
+                <input type="reset" value="クリア" />
+            </form>
+            <!-- <button onclick="soushin()">計算</button> -->
+            <input type="submit" value="計算" id="submit" onclick="soushin()" />
+            <h2>結果表示</h2>
+
+            <p id="bmi"></p>
+            <p id="rank"></p>
+            <p id="std"></p>
+        </div>
+
+        <script src="./rensyuumondaiC.js"></script>
+    </body>
+</html>

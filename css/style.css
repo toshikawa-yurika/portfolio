@@ -1,0 +1,761 @@
+@charset "utf-8";
+
+/* モバイルファースト */
+/* ベースルール */
+
+body {
+    font-family: "游ゴシック", "Yu Gothic", YuGothic, HiraKakuProN-W3,
+        "メイリオ", Meiryo, sans-serif;
+    color: #666;
+    background-color: #fff;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+a:hover {
+    color: #c942bb;
+}
+
+/* -------------------- */
+
+/* フレックス */
+
+@media screen and (min-width: 760px) {
+    .flex {
+        display: flex;
+    }
+}
+
+/* -------------------- */
+
+/* ヘッダー */
+
+@media screen and (min-width: 760px) {
+    .header-zentai {
+        max-width: 960px;
+        height: 200px;
+        margin: 0 auto;
+        justify-content: space-between;
+    }
+
+    .icon-and-nav {
+        flex-direction: column;
+        justify-content: baseline;
+        align-items: flex-end;
+        gap: 80px;
+    }
+}
+
+/* ヘッダーロゴ */
+
+.header-logo {
+    width: 210px;
+    height: auto;
+    margin: 20px 15px;
+}
+
+@media screen and (min-width: 760px) {
+    .header-logo {
+        width: 275px;
+        height: auto;
+        margin: 100px 50px;
+    }
+}
+
+/* アイコン */
+
+.fa-brands {
+    display: none;
+}
+
+@media screen and (min-width: 760px) {
+    .icon {
+        text-align: right;
+        margin-top: 100px;
+        margin-right: 40px;
+    }
+
+    .fa-brands {
+        display: inline-block;
+        font-size: 25px;
+        margin-left: 10px;
+    }
+}
+
+/* ナビゲーション */
+
+/* ハンバーガーメニュー */
+
+.menu {
+    position: fixed;
+    top: 20px;
+    right: 30px;
+    z-index: 2;
+}
+
+.menu a,
+.menu a span {
+    display: block;
+    transition: 0.5s all;
+    box-sizing: border-box;
+}
+
+.menu a {
+    position: relative;
+    width: 30px;
+    height: 25px;
+}
+
+.menu a span {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #666;
+    border-radius: 3px;
+}
+
+.menu a span:nth-of-type(1) {
+    top: 0;
+}
+.menu a span:nth-of-type(2) {
+    top: 12px;
+}
+.menu a span:nth-of-type(3) {
+    bottom: 0;
+}
+
+.hamburger span:nth-of-type(1) {
+    transform: translateY(12px) rotate(-45deg);
+}
+.hamburger span:nth-of-type(2) {
+    opacity: 0;
+}
+.hamburger span:nth-of-type(3) {
+    transform: translateY(-11px) rotate(45deg);
+}
+
+.nav {
+    position: fixed;
+    right: -40%;
+    /* 外側に出している */
+    top: 0;
+    width: 40%;
+    height: 100%;
+    z-index: 1;
+    transition: transform 0.3s;
+    background-color: rgba(220, 220, 220, 0.5);
+    transition: 0.5s cubic-bezier(0.82, 0.04, 0.83, 0.67);
+    /* これを付けると、画面幅変更したときにもアニメーションが起動してしまう */
+}
+
+.show {
+    right: 0%;
+    transition: 0.5s cubic-bezier(0.82, 0.04, 0.83, 0.67);
+}
+
+@media screen and (min-width: 760px) {
+    .menu {
+        display: none;
+    }
+
+    .nav {
+        position: static;
+        background: none;
+        margin-right: 180px;
+    }
+
+    .icon-and-nav {
+        flex-grow: 1;
+    }
+}
+
+/* -------------------- */
+
+.nav-ul {
+    margin: 100px 30px;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.nav-ul-li {
+    margin-bottom: 30px;
+}
+
+.nav-link {
+    color: black;
+    font-family: "Lato", sans-serif;
+    font-weight: 300;
+    letter-spacing: 0.15em;
+}
+
+@media screen and (min-width: 760px) {
+    .nav-ul {
+        margin: 0;
+        gap: 50px;
+    }
+
+    .nav-link {
+        /* color: black; */
+        font-size: 15px;
+    }
+}
+
+/* フッターナビゲーション */
+
+.footer-nav-ul {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.footer-nav-ul-li {
+    display: block;
+    width: 50%;
+    height: auto;
+    padding: 15px;
+    text-align: center;
+    border: 1px solid #dedede;
+    box-sizing: border-box;
+}
+
+.footer-nav-link {
+    color: black;
+    font-family: "Lato", sans-serif;
+    font-weight: 300;
+    font-size: 13px;
+    letter-spacing: 0.15em;
+}
+
+@media screen and (min-width: 760px) {
+    .footer-nav-ul {
+        flex-wrap: nowrap;
+        gap: 20px;
+    }
+
+    .footer-nav-ul-li {
+        border: none;
+    }
+
+    .footer-nav-link {
+        font-size: 15px;
+    }
+}
+
+/* -------------------- */
+
+/* メイン */
+
+/* -------------------- */
+
+/* キービジュアル */
+
+.sumaho-img {
+    position: relative;
+}
+
+.sumaho-img-gazou {
+    width: 100%;
+    height: auto;
+    filter: brightness(120%);
+    filter: saturate(140%);
+}
+
+.sumaho-maru {
+    width: 50px;
+    height: 400px;
+    background-color: #fff;
+    box-shadow: 2px 2px 5px #666;
+    position: absolute;
+    right: 50px;
+    bottom: -50px;
+}
+
+.sumaho-maru-p {
+    position: absolute;
+    top: 30px;
+    right: 15px;
+    letter-spacing: 0.1rem;
+    font-weight: 500;
+    writing-mode: vertical-rl;
+}
+
+.pc-img {
+    display: none;
+}
+
+@media screen and (min-width: 760px) {
+    .sumaho-img {
+        display: none;
+    }
+
+    .pc-img {
+        display: block;
+        /* noneから表示させるため */
+        margin-top: 50px;
+        position: relative;
+    }
+
+    .pc-img-gazou {
+        filter: brightness(120%);
+        filter: saturate(140%);
+        width: 100%;
+        height: 300px;
+        object-fit: cover;
+    }
+
+    .pc-maru {
+        width: 320px;
+        height: 180px;
+
+        background-color: #fff;
+        position: absolute;
+        right: 10%;
+        top: 50px;
+    }
+
+    .pc-maru-p {
+        text-align: center;
+        margin-top: 80px;
+        font-size: 13px;
+    }
+}
+
+/* 丸の位置が動いてしまうので調整 */
+@media screen and (min-width: 980px) {
+    .pc-maru {
+        right: 15%;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .pc-maru {
+        right: 20%;
+    }
+}
+
+@media screen and (min-width: 1550px) {
+    .pc-maru {
+        right: 25%;
+    }
+}
+
+@media screen and (min-width: 1750px) {
+    .pc-maru {
+        right: 30%;
+    }
+}
+
+/* -------------------- */
+
+/* セクションのベースルール */
+
+/* -------------------- */
+
+.h2 {
+    font-size: 40px;
+    text-align: center;
+    margin-bottom: 40px;
+    line-height: 1;
+    font-family: "Lato", sans-serif;
+    font-weight: 100;
+    letter-spacing: 0.2em;
+}
+
+.section {
+    padding: 0 30px;
+    margin-top: 100px;
+}
+
+.h3 {
+    font-size: 22px;
+    text-align: center;
+    margin-bottom: 12px;
+    line-height: 1;
+    margin-bottom: 20px;
+    font-weight: 300;
+}
+
+.skill-p,
+.blog-p {
+    font-size: 0.8rem;
+    line-height: 1.5rem;
+}
+
+/* ボタン */
+
+.btn {
+    display: block;
+    background-color: #eeeeee;
+    width: 60px;
+    padding: 5px;
+    text-align: center;
+    border-radius: 10px;
+    /* box-shadow: 2px 2px 5px #666; */
+    float: right;
+    position: relative;
+    padding-left: 10px;
+    transition: 0.5s;
+}
+
+/* フロート解除 */
+.clearfix::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.btn:hover {
+    transform: scale(0.9, 0.9);
+}
+
+.btn::before {
+    content: "";
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border: transparent 5px solid;
+    border-left-color: #666;
+    position: absolute;
+    top: 10px;
+    left: 5px;
+}
+
+/* セクション共通 */
+@media screen and (min-width: 760px) {
+    .section-inner {
+        max-width: 960px;
+        margin: 0 auto;
+    }
+}
+
+/* フェードインアニメーション */
+
+.fade-in {
+    opacity: 0;
+    transform: translate(0, 50px);
+    transition-property: opacity, transform;
+    transition-duration: 1s;
+    /* slillのdivだけ時間が効いてない・・・ */
+}
+
+.scroll-in {
+    opacity: 1;
+    transform: translate(0, 0);
+    /* transition-duration: 3s; */
+}
+
+
+/* -------------------- */
+
+/* セクション詳細設定 */
+
+/* -------------------- */
+
+/* スキル */
+
+.skill-div {
+    padding: 30px;
+    padding-bottom: 10px;
+    margin-bottom: 50px;
+    border-radius: 10px;
+    box-shadow: 0 12px 15px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+    transition: 0.3s;
+}
+
+/* ホバーしたら、動きのあるようにする */
+
+.skill-div:hover {
+    box-shadow: none;
+    transform: translateY(2px);
+    /* transform: scale(0.9, 0.9); */
+    transition: 0.3s;
+}
+
+.skill-div:hover h3
+{
+    color: #c942bb;
+}
+
+/* アフター疑似要素で線を付ける */
+
+.skill-h3::after {
+    content: "";
+    position: relative;
+    left: 50%;
+    top: 20px;
+    transform: translateX(-50%);
+    display: block;
+    width: 30px;
+    height: 1px;
+    background: #646161;
+    transition: width 0.3s;
+}
+
+.skill-div:hover .skill-h3::after {
+    width: 60px;
+    background-color: #c942bb;
+}
+
+
+/* スキルのそれぞれの画像 */
+
+.skill-img {
+    display: block;
+    margin: 0 auto;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    /* fill:#646161; */
+    /* stroke:  #c942bb; */
+}
+
+/* .skill-div:hover .skill-img{
+    fill: #c942bb;
+} */
+
+
+/* それぞれサイズ調整 */
+
+.html-img {
+    height: 38px;
+}
+
+.sql-img{
+    height: 38px;
+}
+
+.php-img {
+    height: 28px;
+}
+
+.laravel-img{
+    height: 45px;
+}
+
+.figma-img{
+    height: 45px;
+}
+
+/* スキル文章 */
+
+.skill-p {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.bold{
+    font-weight: bold;
+}
+
+@media screen and (min-width: 760px) {
+    .skill-flex {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 70px;
+        margin-top: 100px;
+    }
+
+    .skill-div {
+        width: 25%;
+    }
+
+    .skill-p {
+        /* margin-top: 30px; */
+        margin-bottom: 20px;
+    }
+
+    .skill-h3 {
+        margin-bottom: 40px;
+    }
+
+    /* php詳細設定 */
+    .php-h3 {
+        margin-bottom: 30px;
+    }
+
+    .php-img {
+        margin-bottom: 10px;
+    }
+
+
+}
+
+/* -------------------- */
+
+/* ワークス ＆ ブログ*/
+
+.works-div,
+.blog-div {
+    width: 70%;
+    height: auto;
+    margin: 0 auto;
+    margin-bottom: 30px;
+}
+
+
+.works-img,
+.blog-img {
+    object-fit: cover;
+    width: 100%;
+    height: 280px;
+    box-shadow: 0 12px 15px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+    transition: 0.3s;
+}
+
+.works-img:hover,
+.blog-img:hover {
+    box-shadow: none;
+    transform: translateY(2px);
+    /* transform: scale(0.9, 0.9); */
+    transition: 0.3s;
+}
+
+@media screen and (min-width: 760px) {
+    .works-flex,
+    .blog-flex {
+        justify-content: center;
+        gap: 30px;
+        margin-top: 80px;
+    }
+}
+
+/* -------------------- */
+
+/* ワークス*/
+
+
+
+/* -------------------- */
+
+/* ブログ */
+
+.blog{
+    margin-bottom: 80px;
+}
+
+.blog-img {
+    margin-bottom: 30px;
+}
+
+.blog-p {
+    margin-bottom: 25px;
+}
+
+/* -------------------- */
+
+/* フッター */
+
+/* -------------------- */
+
+.footer-img {
+    display: none;
+    margin: 0 auto;
+    margin-bottom: 40px;
+}
+
+/* CSSトグルでやった場合に使う↓ */
+/* フッターナビゲーション開閉用 */
+/* .footer-nav { */
+/* 開閉だけの場合 */
+/* display: none; */
+
+/* アニメーション効かす場合 */
+/* opacity: 0;
+    visibility: hidden;
+    transition: 1s; */
+/* } */
+
+/* java script用 */
+/* .visible { */
+/* 開閉だけの場合 */
+/* display: block; */
+
+/* アニメーション効かす場合 */
+/* opacity: 1;
+    visibility: visible;
+    transition: 1s; */
+/* } */
+
+.tap-waku {
+    width: 50px;
+    height: 50px;
+    border: 1.5px #666 solid;
+    border-radius: 50%;
+    margin: 20px 50px;
+    position: relative;
+}
+
+.tap {
+    width: 40px;
+    height: 40px;
+    border: 0.5px #666 solid;
+    border-radius: 50%;
+    position: absolute;
+    top: 3.4px;
+    left: 3.4px;
+}
+
+/* java script用 */
+.color-change {
+    background-color: #666;
+}
+
+.tap-p {
+    position: absolute;
+    top: 10px;
+    left: 3px;
+}
+
+/* java script用 */
+.tap-p-henkou {
+    font-size: 24px;
+    color: #fff;
+    top: 6px;
+    left: 12px;
+    font-family: "Times New Roman", "YuMincho", "Hiragino Mincho ProN",
+        "Yu Mincho", "MS PMincho", serif;
+}
+
+.copyright {
+    margin: 20px;
+    text-align: center;
+    font-size: 10px;
+}
+
+@media screen and (min-width: 760px) {
+    .footer {
+        max-width: 960px;
+        margin: 0 auto;
+        padding: 50px 0;
+        position: relative;
+    }
+
+    .footer-flex {
+        justify-content: space-between;
+    }
+
+    .footer-nav {
+        display: block;
+    }
+
+    .tap-waku {
+        display: none;
+    }
+
+    /* java scriptで付ける？？ */
+    .fixed {
+        position: fixed;
+        right: 5%;
+        bottom: 5%;
+    }
+
+    .bottom {
+        /* display: block !important; */
+
+        position: absolute;
+        right: 50%;
+        top: 0;
+    }
+}

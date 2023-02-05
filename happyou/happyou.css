@@ -1,0 +1,272 @@
+@charset "utf-8";
+
+body {
+    font-family: "Kiwi Maru", "Helvetica Neue", "Helvetica", "Hiragino Sans",
+        "Hiragino Kaku Gothic ProN", "Arial", "Yu Gothic", "Meiryo", serif;
+    color: #333333;
+    line-height: 2rem;
+    letter-spacing: 0.05rem;
+    background-color: #f2f0e9;
+}
+/* キウイ丸がとてもかわいい・・・ */
+
+/* -------------------- */
+
+/* ヘッダー */
+.header {
+    height: 100vh;
+}
+
+.header-title,
+.header-p1,
+.header-p2,
+.section-p {
+    text-align: center;
+}
+
+.header-title {
+    margin-top: 20vh;
+    font-size: 52px;
+    font-weight: 700;
+    line-height: 73px;
+    /* 斜め線のための設定 */
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+/* 斜め線 */
+.header-title::before,
+.header-title::after {
+    border-top: 3px solid #000;
+    content: "";
+    width: 100px;
+    margin: 30px;
+    transform: rotate(45deg);
+}
+
+.header-title::after {
+    transform: rotate(-45deg);
+}
+
+.header-p1,
+.header-p2 {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 32px;
+}
+
+.header-p1 {
+    padding-top: 50px;
+}
+
+.header-p2 {
+    padding-top: 100px;
+}
+
+/* -------------------- */
+
+/* メイン */
+.main-inner {
+    width: 70%;
+    margin: 0 auto;
+}
+
+/* セクション共通 */
+.section2,
+.section3,
+.section4 {
+    padding-top: 200px;
+}
+
+.section-number {
+    font-size: 40px;
+    display: flex;
+    text-align: center;
+}
+
+.section-number::before,
+.section-number::after {
+    border-top: 3px solid #000;
+    content: "";
+    /* flex-grow: 1; */
+    width: 100%;
+    margin: 30px;
+}
+
+.section-h2-div {
+    background-color: #999;
+    max-width: 500px;
+    padding: 30px;
+    height: 260px;
+    margin: 0 auto;
+    border-radius: 30px;
+    margin-top: 40px;
+}
+
+.section-p {
+    margin-top: 50px;
+    font-size: 18px;
+}
+
+.kaiketubun {
+    color: red;
+    font-weight: bold;
+}
+
+.codepen-div {
+    margin-top: 50px;
+}
+
+.section-div {
+    margin-top: 50px;
+    border: 1px solid #333333;
+    border-radius: 10px;
+    padding: 50px;
+    position: relative;
+}
+
+.section-h3-div {
+    background-color: #dedede;
+    display: inline-block;
+    padding: 3px 15px;
+    border-radius: 5px;
+    font-size: 20px;
+    position: absolute;
+    top: -13px;
+    left: -5px;
+}
+
+.sanko-saito {
+    font-weight: bold;
+}
+.sanko-saito:hover {
+    color: #fec463;
+}
+
+.sanko-saito::before {
+    content: "";
+    display: inline-block;
+    width: 0;
+    height: 0;
+    margin-right: 5px;
+    border: transparent 5px solid;
+    border-left-color: #333333;
+    vertical-align: middle;
+}
+
+.dl {
+    margin-top: 20px;
+    display: flex;
+    gap: 15px;
+}
+
+.dt {
+    background-color: #fec463;
+    border-radius: 10px;
+    padding: 3px 10px;
+    /* 伸びないように設定 */
+    flex-shrink: 0;
+    height: 2rem;
+}
+
+/* セクション１ */
+
+.section1-h2 {
+    font-size: 40px;
+    font-weight: 500;
+    writing-mode: vertical-rl;
+    display: block;
+    margin: 0 auto;
+    line-height: 5rem;
+}
+/* 縦書きについて */
+/* flexでalign-items: center; でも中央揃えできるらしい　*/
+
+/* セクション２ */
+.relative {
+    position: relative;
+}
+
+.absolute {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform-origin: 0 0;
+    transform: translate(-50%, -50%);
+}
+
+@keyframes maru-animation {
+    0% {
+        transform: rotate(0deg) translate(-50%, -50%);
+    }
+    100% {
+        transform: rotate(360deg) translate(-50%, -50%);
+    }
+}
+
+.section2-maru {
+    background-color: #fff;
+    width: 250px;
+    height: 250px;
+    border-radius: 58% 42% 58% 42% / 47% 57% 43% 53%;
+    animation: maru-animation 5s infinite ease-in-out;
+}
+
+.section2-h2 {
+    font-size: 20px;
+    text-align: center;
+}
+
+/* セクション３ */
+
+.section3-shikaku {
+    width: 280px;
+    height: 200px;
+    background-color: #fff;
+    border: 10px solid #333333;
+    border-radius: 20px;
+    position: relative;
+}
+
+.section3-batsu {
+    top: 0;
+    left: 100%;
+    width: 30px;
+    height: 30px;
+    background-color: #333333;
+    color: #fff;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.section3-h2 {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+/* セクション４ */
+
+.section4 {
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 50px;
+}
+
+.ten {
+    margin: 1em 0;
+    padding-left: 40px;
+    list-style-type: disc;
+}
+
+/* フッター */
+
+.footer-inner {
+    margin: 50px 30px;
+    display: flow-root;
+}
+
+.footer p {
+    font-size: 10px;
+    float: right;
+}

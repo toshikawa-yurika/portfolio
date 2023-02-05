@@ -1,0 +1,119 @@
+@charset "utf-8";
+
+/* モバイルファースト */
+
+/* ベースルール */
+
+body {
+    font-size: 14px;
+    letter-spacing: 0.1rem;
+    line-height: 1.5rem;
+}
+
+/* -------------------- */
+
+/* ナビゲーション */
+
+/* クラス名だとホバーしたときにピンクが効いてしまう */
+/* .nav-about {
+    color: #d3d3d3;
+} */
+
+/* 一応これでも効いたのでクラス名付けなくてもよさそう */
+/* ホバーしてもピンクにならない */
+nav ul li:nth-of-type(1) a {
+    color: #d3d3d3;
+}
+
+/* -------------------- */
+
+/* メイン */
+
+.main-inner {
+    margin: 20px;
+}
+
+@media screen and (min-width: 760px) {
+    .wrap {
+        max-width: 960px;
+        height: auto;
+        margin: 0 auto;
+    }
+
+    .main-inner {
+        margin: 58px;
+    }
+}
+
+/* タイトル */
+.h2 {
+    margin-top: 50px;
+}
+
+@media screen and (min-width: 760px) {
+    .h2 {
+        text-align: left;
+    }
+}
+
+/* 文章 */
+.p-text{
+    margin-bottom: 15px;
+}
+
+
+/* 画像 */
+.about-img {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.about-img-gazou{
+    width: 160px;
+    height: 160px;
+    object-fit: cover;
+}
+
+@media screen and (min-width: 760px) {
+    .about-img {
+        margin-top: 50px;
+        /* align-self: flex-start; */
+    }
+}
+
+.about-dl {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 50px 0;
+    font-size: 12px;
+}
+
+.about-dt {
+    width: 30%;
+    font-weight: bold;
+}
+
+.about-dd {
+    width: 70%;
+}
+
+@media screen and (min-width: 760px) {
+    .about-flex {
+        align-items: flex-start;
+        gap: 40px;
+    }
+
+}
+
+/* -------------------- */
+
+/* フッター */
+
+@media screen and (min-width: 760px) {
+    .footer {
+        padding-top: 0;
+    }
+    .about-footer-nav {
+        margin-left: 45px;
+    }
+}

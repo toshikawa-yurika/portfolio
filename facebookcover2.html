@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>歳川柚里香のポートフォリオサイト</title>
+    <!-- リセットCSS -->
+    <link href="./css/riset.css" rel="stylesheet" media="all" />
+    <!-- font-awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- グーグルフォント -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100&display=swap" rel="stylesheet" />
+    <!-- スタイルCSS -->
+    <link href="./css/style.css" rel="stylesheet" media="all" />
+    <link href="./css/works.css" rel="stylesheet" media="all" />
+    <link href="./css/works-syousai.css" rel="stylesheet" media="all" />
+
+    <!-- jQueri -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <div class="wrap">
+        <header class="header">
+            <div class="flex header-zentai">
+                <div class="logo">
+                    <h1 class="h1">
+                            <a href="./index.php">
+                                <img
+                                    src="./img/logo.jpg"
+                                    alt="portfolio"
+                                    class="header-logo"
+                                />
+                            </a>
+                        </h1>
+                </div>
+
+                <div class="flex icon-and-nav">
+                    <div class="icon">
+                        <i class="fa-brands fa-instagram"></i>
+                        <i class="fa-brands fa-facebook"></i>
+                    </div>
+
+                    <!-- ハンバーガーメニュー -->
+                    <div class="menu">
+                        <a id="hamburger" href="#">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </a>
+                    </div>
+
+                    <nav class="nav" id="nav">
+                        <ul class="flex nav-ul">
+                            <li class="nav-ul-li">
+                                <a href="./about.html" class="nav-link">about</a>
+                            </li>
+                            <li class="nav-ul-li">
+                                <a href="./works.html" class="nav-link">works</a>
+                            </li>
+                            <li class="nav-ul-li">
+                                <a href="./index.php#blog" class="nav-link">blog</a>
+                            </li>
+                            <li class="nav-ul-li">
+                                <a href="./contact.html" class="nav-link">contact</a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <!------------------------->
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <div class="main-inner">
+                <h2 class="h2">facebook cover 2</h2>
+
+                <img src="./img/works2.jpg" alt="" />
+
+                <h3>①制作意図</h3>
+
+                <p>
+                自分で作ったカバーデザイン2の模倣というか楕円形バージョンを作ってみたいと思い、
+                作成し始めました。
+                </p>
+
+                <h3>②制作プロセス</h3>
+
+                <p>
+                1.最初に元画像を楕円形にレイヤーマスクしました。<br>
+                （境界線はぼかしが入るよう、選択範囲のぼかしを入れています。）<br>
+                2.楕円形２つを重ね、線が外側に２本入るようにしました。<br>
+                （内側の線は元画像の真ん中の色をスポイトツールで同じ色にして、なじむように。外側の線は逆に引き立つように白色にしました。）<br>
+                3.背景は、元画像のサイズ違いですが、左上と右下で２枚重ね合わせていて、左上のほうをレイヤーマスクでグラデーションで透けさせて、右下となじむようにしています。<br>
+                </p>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <a href="#" id="pageTop">
+                <img src="./img/modorubutton.svg" alt="topへ戻る" class="footer-img" />
+            </a>
+
+            <div class="tap-waku">
+                <div class="tap">
+                    <p class="tap-p">TAP</p>
+                </div>
+            </div>
+
+            <div class="flex footer-flex">
+                <nav class="footer-nav">
+                    <ul class="footer-nav-ul">
+                        <li class="footer-nav-ul-li">
+                            <a href="./about.html" class="footer-nav-link">about</a>
+                        </li>
+                        <li class="footer-nav-ul-li">
+                            <a href="./works.html" class="footer-nav-link">works</a>
+                        </li>
+                        <li class="footer-nav-ul-li">
+                            <a href="./index.php#blog" class="footer-nav-link">blog</a>
+                        </li>
+                        <li class="footer-nav-ul-li">
+                            <a href="./contact.html" class="footer-nav-link">contact</a>
+                        </li>
+                    </ul>
+                </nav>
+                <p class="copyright">
+                        <small>&copy;toshikawa yurika portfolio 2022</small>
+                    </p>
+            </div>
+        </footer>
+    </div>
+    <script src="./js/style.js"></script>
+</body>
+</html>

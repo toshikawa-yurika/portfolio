@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <div>
+            <h1>図形の面積計算アプリ</h1>
+            <form action="">
+                <table>
+                    <tbody>
+                        <tr>
+                            <th>長方形</th>
+                            <td>
+                                幅<input type="text" id="haba" />×高さ<input
+                                    type="text"
+                                    id="takasa"
+                                />
+                            </td>
+                            <td>
+                                <input
+                                    type="button"
+                                    id="submit1"
+                                    class="submit"
+                                    value="="
+                                />
+                                <span id="kaitou1"></span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>正方形</th>
+                            <td>幅<input type="text" id="haba2" />×幅</td>
+                            <td>
+                                <input
+                                    type="button"
+                                    id="submit2"
+                                    class="submit"
+                                    value="="
+                                />
+                                <span id="kaitou2"></span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>円形</th>
+                            <td>
+                                半径<input type="text" id="hankei" />×半径×3.14
+                            </td>
+                            <td>
+                                <input
+                                    type="button"
+                                    id="submit3"
+                                    class="submit"
+                                    value="="
+                                />
+                                <span id="kaitou3"></span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>三角形</th>
+                            <td>
+                                底辺<input type="text" id="teihen" />×高さ<input
+                                    type="text"
+                                    id="takasa2"
+                                />÷2
+                            </td>
+                            <td>
+                                <input
+                                    type="button"
+                                    id="submit4"
+                                    class="submit"
+                                    value="="
+                                />
+                                <span id="kaitou4"></span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>台形</th>
+                            <td>
+                                (上底<input type="text" id="joutei" /> +
+                                下底<input type="text" id="katei" />)×高さ<input
+                                    type="text"
+                                    id="takasa3"
+                                />÷2
+                            </td>
+                            <td>
+                                <input
+                                    type="button"
+                                    id="submit5"
+                                    class="submit"
+                                    value="="
+                                />
+                                <span id="kaitou5"></span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>ひし形</th>
+                            <td>
+                                対角線<input
+                                    type="text"
+                                    id="taikakusen1"
+                                />×対角線<input
+                                    type="text"
+                                    id="taikakusen2"
+                                />÷2
+                            </td>
+                            <td>
+                                <input
+                                    type="button"
+                                    id="submit6"
+                                    class="submit"
+                                    value="="
+                                />
+                                <span id="kaitou6"></span>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <input type="reset" value="クリア" />
+            </form>
+        </div>
+
+        <script src="./rensyuumondaiD.js"></script>
+    </body>
+</html>
