@@ -195,7 +195,8 @@
                             </div> -->
                             <img src="./img/PHP.svg" alt="PHP" class="skill-img php-img" />
                             <p class="skill-p">
-                                PHPを学びました。cookie・sectionや、CRUDはできるようになりました。授業の中でも特に面白さを感じた部分です。より深めていきたいと考えています。
+                                PHPを学びました。cookie・sectionや、CRUDはできるようになりました。授業の中でも特に面白さを感じた部分です。より深めていきたいと考えています。<br>
+                                ぜひworksの<span class="bold"><a href="./works.html#works7">書籍登録アプリ</a></span>をご覧ください。
                             </p>
                         </div>
 
@@ -328,6 +329,7 @@
         </footer>
     </div>
     <script src="./js/style.js"></script>
+    <script src="./js/index.js"></script>
 </body>
 
 </html>
