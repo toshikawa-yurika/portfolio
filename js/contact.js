@@ -52,3 +52,22 @@ function click_cb() {
 }
 
 // 必須項目が抜けていた場合、ボタン押せないようにする？
+
+
+function history_back(name, email, tel, age_name, sex, koumoku, naiyou) {
+
+    // 値がこれなら何番目にcheckedを付けると設定?
+    // age_name, sex, koumoku,
+
+    console.log(age_name);
+    console.log(sex);
+    console.log(koumoku);
+
+    window.location.href = "contact.php?name=" + name
+        + "&email=" + email
+        + "&tel=" + tel
+        + "&age=" + age_name
+        + "&sex=" + sex
+        + "&koumoku=" + koumoku
+        + "&naiyou=" + naiyou;
+}

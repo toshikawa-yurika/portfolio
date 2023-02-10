@@ -1,5 +1,36 @@
+<?php
+
+$name = "";
+
+if (isset($_GET["name"]) & !empty($_GET["name"])) {
+    $name = $_GET["name"];
+}
+
+$email = "";
+
+if (isset($_GET["email"]) & !empty($_GET["email"])) {
+    $email = $_GET["email"];
+}
+
+$tel = "";
+
+if (isset($_GET["tel"]) & !empty($_GET["tel"])) {
+    $tel = $_GET["tel"];
+}
+
+// 年齢、性別、項目名は保留
+
+$naiyou = "";
+
+if (isset($_GET["naiyou"]) & !empty($_GET["naiyou"])) {
+    $naiyou = $_GET["naiyou"];
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -27,14 +58,10 @@
             <div class="flex header-zentai">
                 <div class="logo">
                     <h1 class="h1">
-                            <a href="./index.php">
-                                <img
-                                    src="./img/logo.jpg"
-                                    alt="portfolio"
-                                    class="header-logo"
-                                />
-                            </a>
-                        </h1>
+                        <a href="./index.php">
+                            <img src="./img/logo.jpg" alt="portfolio" class="header-logo" />
+                        </a>
+                    </h1>
                 </div>
 
                 <div class="flex icon-and-nav">
@@ -76,31 +103,31 @@
             <div class="main-inner">
                 <h2 class="h2">Contact</h2>
 
-                <form id="otoiawase" action="#" method="post">
+                <form id="otoiawase" action="./contact_receive.php" method="post">
                     <p>
-                            お問い合わせは、下記のメールフォームより送信をお願いします。<br />
-                            必須の項目は必ずご記入お願いします。
-                        </p>
+                        お問い合わせは、下記のメールフォームより送信をお願いします。<br />
+                        必須の項目は必ずご記入お願いします。
+                    </p>
                     <ul class="contact-ul">
                         <li class="contact-li">
                             <p>
-                                    お名前
-                                    <span class="span">必須</span>
-                                </p>
+                                お名前
+                                <span class="span">必須</span>
+                            </p>
 
-                            <input type="text" name="namae" required placeholder="例）徳島　太郎" class="border" />
+                            <input type="text" name="namae" required placeholder="例）徳島　太郎" class="border" value="<?php echo $name; ?>" />
                         </li>
                         <li class="contact-li">
                             <p>
-                                    メールアドレス<span class="span">必須</span>
-                                </p>
+                                メールアドレス<span class="span">必須</span>
+                            </p>
 
-                            <input type="email" name="email" required placeholder="tokushima@example.com" class="border" />
+                            <input type="email" name="email" required placeholder="tokushima@example.com" class="border" value="<?php echo $email; ?>" />
                         </li>
                         <li class="contact-li">
                             <p>電話番号</p>
 
-                            <input type="tel" name="tel" placeholder="0123-123-456" class="border" />
+                            <input type="tel" name="tel" placeholder="0123-123-456" class="border" value="<?php echo $tel; ?>" />
                         </li>
                         <li class="contact-li">
                             <p>ご年齢</p>
@@ -110,17 +137,18 @@
                                         <option value="" selected>
                                             選択してください
                                         </option>
-                                        <option value="0">20歳未満</option>
-                                        <option value="1">20代</option>
-                                        <option value="2">30代</option>
-                                        <option value="3">40代</option>
-                                        <option value="4">50代</option>
-                                        <option value="5">60歳以上</option>
+                                        <!-- valueの値とpostの値が一緒だったら、selectedを付ける処理をする -->
+                                        <option value="1">20歳未満</option>
+                                        <option value="2">20代</option>
+                                        <option value="3">30代</option>
+                                        <option value="4">40代</option>
+                                        <option value="5">50代</option>
+                                        <option value="6">60歳以上</option>
                                     </select>
                                 </div>
                             </label>
                         </li>
-                        <!-- 性別もセレクトでやるか迷う。。。 -->
+
                         <li class="contact-li">
                             <p>性別</p>
 
@@ -134,37 +162,38 @@
 
                         <li class="contact-li">
                             <p>
-                                    お問い合わせ項目<span class="span"
-                                        >2個まで</span
-                                    >
-                                </p>
+                                お問い合わせ項目<span class="span">2個まで</span>
+                            </p>
                             <div class="contact-flex">
                                 <div class="checklist">
-                                    <input type="checkbox" name="koumoku" value="スキルについて" id="koumoku-skill" onclick="click_cb();" /><label for="koumoku-skill">スキルについて</label>
+                                    <input type="checkbox" name="koumoku[]" value="スキルについて" id="koumoku-skill" onclick="click_cb();" /><label for="koumoku-skill">スキルについて</label>
                                 </div>
 
                                 <div class="checklist">
-                                    <input type="checkbox" name="koumoku" value="ワークスについて" id="koumoku-works" onclick="click_cb();" /><label for="koumoku-works">ワークスについて</label>
+                                    <input type="checkbox" name="koumoku[]" value="ワークスについて" id="koumoku-works" onclick="click_cb();" /><label for="koumoku-works">ワークスについて</label>
                                 </div>
 
                                 <div class="checklist">
-                                    <input type="checkbox" name="koumoku" value="ブログについて" id="koumoku-blog" onclick="click_cb();" /><label for="koumoku-blog">ブログについて</label>
+                                    <input type="checkbox" name="koumoku[]" value="ブログについて" id="koumoku-blog" onclick="click_cb();" /><label for="koumoku-blog">ブログについて</label>
                                 </div>
                             </div>
                         </li>
 
                         <li class="contact-li">
                             <p>
-                                    お問い合わせ内容<span class="span"
-                                        >必須</span
-                                    >
-                                </p>
+                                お問い合わせ内容<span class="span">必須</span>
+                            </p>
 
-                            <textarea name="naiyou" id="naiyou" cols="30" rows="10" class="border otoiawase-naiyou"></textarea>
+                            <textarea name="naiyou" id="naiyou" cols="30" rows="10" class="border otoiawase-naiyou"><?php echo $naiyou; ?></textarea>
+                        </li>
+
+                        <li class="contact-li">
+                            <input type="submit" value="内容を確認する" class="button">
                         </li>
                     </ul>
+
                 </form>
-                <input type="button" value="内容を送信する" class="button" />
+
             </div>
         </main>
 
@@ -197,12 +226,13 @@
                     </ul>
                 </nav>
                 <p class="copyright">
-                        <small>&copy;toshikawa yurika portfolio 2022</small>
-                    </p>
+                    <small>&copy;toshikawa yurika portfolio 2022</small>
+                </p>
             </div>
         </footer>
     </div>
     <script src="./js/style.js"></script>
     <script src="./js/contact.js"></script>
 </body>
+
 </html>

@@ -64,7 +64,7 @@
                                 <a href="#blog" class="nav-link" id="navLink">blog</a>
                             </li>
                             <li class="nav-ul-li">
-                                <a href="./contact.html" class="nav-link">contact</a>
+                                <a href="./contact.php" class="nav-link">contact</a>
                             </li>
                         </ul>
                     </nav>
@@ -205,7 +205,8 @@
                                 Laravel</h3>
                             <img src="./img/laravel.svg" alt="laravel" class="skill-img laravel-img" />
                             <p class="skill-p">
-                                PHPフレームワークの「laravel」も習いました。MVCの概念も併せて学びました。<span class="bold">こちらのポートフォリオもlaravelを使用しています。</span>
+                                PHPフレームワークの「laravel」も習いました。MVCの概念も併せて学びました。<br>
+                                <span class="bold">現在の職業訓練校の卒業制作でもlaravelを使用し、作成しているところです。</span>
                             </p>
                         </div>
 
@@ -318,7 +319,7 @@
                             <a href="#blog" class="footer-nav-link">blog</a>
                         </li>
                         <li class="footer-nav-ul-li">
-                            <a href="./contact.html" class="footer-nav-link">contact</a>
+                            <a href="./contact.php" class="footer-nav-link">contact</a>
                         </li>
                     </ul>
                 </nav>
